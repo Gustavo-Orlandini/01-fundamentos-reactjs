@@ -1,20 +1,28 @@
-import styles from './Sidebar.module.css';
+import { PencilLine } from 'phosphor-react'
+import styles from "./Sidebar.module.css"; 
 
-export function Sidebar() {
-    return (
-        <aside className={styles.sidebar}>
-            <img 
-                clasName={styles.cover} 
-                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=40" />
-        
+
+export function Sidebar() {   
+    return (     
+        <aside className={styles.sidebar}>       
+            <img         
+                className={styles.cover}         
+                src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y29kZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"         
+                alt=""       
+            />       
             <div className={styles.profile}>
-                <strong>Joyce Orlandini</strong>
-                <span>Web Developer</span>
-            </div>
-
-            <footer>
-                <a href="#">Editar o seu perfil</a>
-            </footer>
-        </aside>
-    );
+                <img className={styles.avatar} src="https://github.com/Gustavo-Orlandini.png" />         
+                
+                <strong>Gustavo Orlandini</strong>         
+                <span>Web Developer</span>       
+            </div>       
+    
+            <footer>         
+                <a href="#">
+                    <PencilLine size={20} />
+                    Editar seu perfil
+                </a>       
+            </footer>     
+        </aside>   
+    ); 
 }
